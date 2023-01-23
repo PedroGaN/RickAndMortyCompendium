@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Screen View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MainScreenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="MainScreenViewController" customModule="RickAndMortyCompendium" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_location" translatesAutoresizingMaskIntoConstraints="NO" id="T8O-YM-xVR">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="x2W-1x-gkE">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="810"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ew7-bN-nIH">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="810"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_empty_data" translatesAutoresizingMaskIntoConstraints="NO" id="Nmk-pK-KnR">
+                                                <rect key="frame" x="56" y="11.666666666666686" width="278" height="743"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Nmk-pK-KnR" firstAttribute="centerY" secondItem="Ew7-bN-nIH" secondAttribute="centerY" constant="-22" id="2zR-HP-uS6"/>
+                                            <constraint firstItem="Nmk-pK-KnR" firstAttribute="leading" secondItem="Ew7-bN-nIH" secondAttribute="leading" constant="56" id="HcE-el-7SK"/>
+                                            <constraint firstAttribute="trailing" secondItem="Nmk-pK-KnR" secondAttribute="trailing" constant="56" id="VwI-nc-HJ5"/>
+                                        </constraints>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="390" placeholderIntrinsicHeight="20" translatesAutoresizingMaskIntoConstraints="NO" id="2EL-Pu-ZNm" customClass="TableMenuView" customModule="RickAndMortyCompendium" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="0.0"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4DG-U1-pss">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="0.0"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="390" placeholderIntrinsicHeight="60" translatesAutoresizingMaskIntoConstraints="NO" id="sp2-Tp-QSL" customClass="FetchMenuView" customModule="RickAndMortyCompendium" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="600" width="390" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="gv7-t9-67f"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sp2-Tp-QSL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="0Wa-fc-h8g"/>
+                            <constraint firstItem="x2W-1x-gkE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="2vn-Jw-WQ9"/>
+                            <constraint firstItem="T8O-YM-xVR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="3Hr-st-F8g"/>
+                            <constraint firstAttribute="bottom" secondItem="T8O-YM-xVR" secondAttribute="bottom" id="3Zq-0k-lcb"/>
+                            <constraint firstItem="sp2-Tp-QSL" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="BFw-JR-hCu"/>
+                            <constraint firstItem="x2W-1x-gkE" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="P13-n6-hrm"/>
+                            <constraint firstItem="T8O-YM-xVR" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="PkJ-dl-Iet"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="x2W-1x-gkE" secondAttribute="bottom" id="Qq5-CJ-RyP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="sp2-Tp-QSL" secondAttribute="bottom" constant="150" id="dXp-6w-dYk"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="T8O-YM-xVR" secondAttribute="trailing" id="fWG-3t-6MD"/>
+                            <constraint firstAttribute="trailing" secondItem="x2W-1x-gkE" secondAttribute="trailing" id="mkI-2n-Yt7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="T8O-YM-xVR" id="4z7-EL-RUe"/>
+                        <outlet property="emptyListView" destination="Ew7-bN-nIH" id="wXm-Ev-Pw5"/>
+                        <outlet property="fetchMenuView" destination="sp2-Tp-QSL" id="aNf-2P-LQc"/>
+                        <outlet property="fetchedInfoTableView" destination="4DG-U1-pss" id="Z6l-XV-2e4"/>
+                        <outlet property="tableMenuView" destination="2EL-Pu-ZNm" id="ubX-WI-2O5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img_empty_data" width="465" height="743"/>
+        <image name="img_location" width="298" height="612"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

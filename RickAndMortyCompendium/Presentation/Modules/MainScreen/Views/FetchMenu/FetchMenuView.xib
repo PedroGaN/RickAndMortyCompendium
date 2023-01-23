@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FetchMenuView" customModule="RickAndMortyCompendium" customModuleProvider="target">
+            <connections>
+                <outlet property="fetchMenuOptionsView" destination="BBx-4e-zz1" id="HeV-kG-0Gv"/>
+                <outlet property="fetchMenuToggleView" destination="pn8-hA-8KE" id="wxk-P3-Fjb"/>
+                <outlet property="fetchOptionCharactersButton" destination="Gj8-H3-Oux" id="ok3-wc-0Vj"/>
+                <outlet property="fetchOptionEpisodesButton" destination="Zui-ku-43u" id="97O-L8-rbC"/>
+                <outlet property="fetchOptionLocationsButton" destination="ry0-QK-qie" id="UlA-xc-LA7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="map-Bi-lSN">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CCA-zb-WlX">
+                    <rect key="frame" x="0.0" y="47" width="390" height="60"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBx-4e-zz1">
+                            <rect key="frame" x="0.0" y="0.0" width="310" height="60"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EFr-AN-D2o">
+                                    <rect key="frame" x="8" y="10" width="294" height="40"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gj8-H3-Oux">
+                                            <rect key="frame" x="0.0" y="0.0" width="92.666666666666671" height="40"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="75" placeholderIntrinsicHeight="40" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ry0-QK-qie">
+                                            <rect key="frame" x="100.66666666666666" y="0.0" width="92.666666666666657" height="40"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zui-ku-43u">
+                                            <rect key="frame" x="201.33333333333334" y="0.0" width="92.666666666666657" height="40"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" name="PowderBlue"/>
+                            <constraints>
+                                <constraint firstItem="EFr-AN-D2o" firstAttribute="top" secondItem="BBx-4e-zz1" secondAttribute="top" constant="10" id="DJu-dw-JD2"/>
+                                <constraint firstItem="EFr-AN-D2o" firstAttribute="leading" secondItem="BBx-4e-zz1" secondAttribute="leading" constant="8" id="FNY-rp-WAm"/>
+                                <constraint firstAttribute="trailing" secondItem="EFr-AN-D2o" secondAttribute="trailing" constant="8" id="U6w-xu-DAC"/>
+                                <constraint firstAttribute="bottom" secondItem="EFr-AN-D2o" secondAttribute="bottom" constant="10" id="k9A-ql-VRM"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pn8-hA-8KE">
+                            <rect key="frame" x="310" y="0.0" width="80" height="60"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_portal_gun" translatesAutoresizingMaskIntoConstraints="NO" id="AmY-R3-8wb">
+                                    <rect key="frame" x="8" y="0.0" width="60" height="60"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="60" id="5Ee-ae-YUE"/>
+                                        <constraint firstAttribute="height" constant="60" id="f8f-Cg-8jl"/>
+                                    </constraints>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zi8-PQ-Lrs">
+                                    <rect key="frame" x="8" y="0.0" width="60" height="60"/>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" name="PowderBlue"/>
+                            <constraints>
+                                <constraint firstItem="AmY-R3-8wb" firstAttribute="top" secondItem="pn8-hA-8KE" secondAttribute="top" id="Kcu-5q-g0I"/>
+                                <constraint firstItem="AmY-R3-8wb" firstAttribute="leading" secondItem="pn8-hA-8KE" secondAttribute="leading" constant="8" id="PD3-bH-faT"/>
+                                <constraint firstAttribute="trailing" secondItem="AmY-R3-8wb" secondAttribute="trailing" constant="12" id="QpK-g0-nsH"/>
+                                <constraint firstItem="Zi8-PQ-Lrs" firstAttribute="top" secondItem="AmY-R3-8wb" secondAttribute="top" id="Qsq-kX-0cp"/>
+                                <constraint firstItem="Zi8-PQ-Lrs" firstAttribute="trailing" secondItem="AmY-R3-8wb" secondAttribute="trailing" id="WNp-tO-2vI"/>
+                                <constraint firstAttribute="bottom" secondItem="AmY-R3-8wb" secondAttribute="bottom" id="gEb-P9-naU"/>
+                                <constraint firstItem="Zi8-PQ-Lrs" firstAttribute="bottom" secondItem="AmY-R3-8wb" secondAttribute="bottom" id="jBe-qg-whZ"/>
+                                <constraint firstItem="Zi8-PQ-Lrs" firstAttribute="leading" secondItem="AmY-R3-8wb" secondAttribute="leading" id="kJs-KA-HHw"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="1lK-94-qiF"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="rrx-ED-1ji"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="SpM-Aj-9LW"/>
+            <constraints>
+                <constraint firstItem="SpM-Aj-9LW" firstAttribute="bottom" secondItem="CCA-zb-WlX" secondAttribute="bottom" id="2fk-Fo-gg6"/>
+                <constraint firstItem="CCA-zb-WlX" firstAttribute="leading" secondItem="SpM-Aj-9LW" secondAttribute="leading" id="KYa-WP-mdz"/>
+                <constraint firstItem="SpM-Aj-9LW" firstAttribute="trailing" secondItem="CCA-zb-WlX" secondAttribute="trailing" id="LQ6-fP-kRL"/>
+                <constraint firstItem="CCA-zb-WlX" firstAttribute="top" secondItem="SpM-Aj-9LW" secondAttribute="top" id="Sbn-eI-Vmf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-71" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_portal_gun" width="691" height="608"/>
+        <namedColor name="PowderBlue">
+            <color red="0.72156862745098038" green="0.88627450980392153" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
