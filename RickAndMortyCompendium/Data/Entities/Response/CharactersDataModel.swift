@@ -12,7 +12,7 @@ import Foundation
 struct CharactersDataModel: Decodable {
 
     let info: CharactersInfoDataModel
-    let results: CharactersResultsDataModel
+    let results: [CharactersResultsDataModel]
     
     enum CodingKeys: String, CodingKey {
         case info
@@ -29,7 +29,7 @@ extension CharactersDataModel {
     // MARK: - Internal functions
 
     func parseToDomainModel() -> CharactersDomainModel {
-        return CharactersDomainModel(info: self.info.parseToDomainModel(), results: self.results.parseToDomainModel())
+        return CharactersDomainModel(info: self.info.parseToDomainModel(), results: self.results.map({ $0.parseToDomainModel() }))
     }
 }
 

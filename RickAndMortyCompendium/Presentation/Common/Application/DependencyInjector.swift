@@ -12,7 +12,7 @@ final class DependencyInjector {
     static let shared = DependencyInjector()
     
     func getAlamofireHttpRepository() -> HttpRepository {
-        //return AlamofireHttpRepository.shared(baseUrl: AlamofireHttpRepositoryConstants.baseURL)
+        return AlamofireHttpRepository.shared(baseUrl: AlamofireHttpRepositoryConstants.baseURL)
     }
     
     // MARK: - Interactors

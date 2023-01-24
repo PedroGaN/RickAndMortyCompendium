@@ -8,9 +8,15 @@
 import Foundation
 import UIKit
 
-protocol MainScreenViewControllerProtocol: BaseViewProtocol {}
+protocol MainScreenViewControllerProtocol: BaseViewProtocol {
+    func setTableCharactersInfo(_ info: [CharacterInfoCellViewModel]?)
+}
 
-class MainScreenViewController: BaseViewController<MainScreenPresenterProtocol>, MainScreenViewControllerProtocol {
+class MainScreenViewController: BaseViewController<MainScreenPresenterProtocol> {
+    
+    // MARK: - Internal Properties
+    
+    var charactersTableDataSource: CharactersDataSource?
     
     // MARK: - IBOutlets
     
@@ -26,18 +32,45 @@ class MainScreenViewController: BaseViewController<MainScreenPresenterProtocol>,
     // MARK: - Overriden Methods
     
     override func setupUI() {
-        setupInitialVisibility()
+        setNoDataVisibility()
         backgroundImageView.image = UIImage(named: "img_location")
         fetchMenuView.setDelegate(self)
         tableMenuView.setDelegate(self)
     }
     
+    // MARK: - Overriden BaseViewProtocol
+    
+    override func showLoading() {
+        super.showLoading()
+        view.isUserInteractionEnabled = false
+    }
+    
+    override func hideLoading() {
+        super.hideLoading()
+        view.isUserInteractionEnabled = true
+    }
+    
     // MARK: - Private Methods
     
-    private func setupInitialVisibility() {
-        tableMenuView.isHidden = true
+    private func setNoDataVisibility() {
         emptyListView.isHidden = false
+        tableMenuView.isHidden = true
+        fetchedInfoTableView.isHidden = true
+    }
+    
+    // MARK: - Internal Methods
+    
+    func setFetchedDataVisibility() {
+        emptyListView.isHidden = true
+        //tableMenuView.isHidden = false
         fetchedInfoTableView.isHidden = false
+    }
+    
+    func setupTableForCharactersData(withCharacterDataSource dataSource: CharactersDataSource?) {
+        fetchedInfoTableView.register(CharacterInfoCell.nib, forCellReuseIdentifier: CharacterInfoCell.identifier)
+        fetchedInfoTableView.dataSource = charactersTableDataSource
+        fetchedInfoTableView.delegate = charactersTableDataSource
+        fetchedInfoTableView.reloadData()
     }
     
 }

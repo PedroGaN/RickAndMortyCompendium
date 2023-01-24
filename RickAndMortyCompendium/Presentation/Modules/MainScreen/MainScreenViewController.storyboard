@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -37,16 +38,15 @@
                                     </view>
                                     <view hidden="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="390" placeholderIntrinsicHeight="20" translatesAutoresizingMaskIntoConstraints="NO" id="2EL-Pu-ZNm" customClass="TableMenuView" customModule="RickAndMortyCompendium" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="0.0"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
-                                    <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4DG-U1-pss">
+                                    <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4DG-U1-pss">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="0.0"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableView>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="390" placeholderIntrinsicHeight="60" translatesAutoresizingMaskIntoConstraints="NO" id="sp2-Tp-QSL" customClass="FetchMenuView" customModule="RickAndMortyCompendium" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="600" width="390" height="60"/>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="60" translatesAutoresizingMaskIntoConstraints="NO" id="sp2-Tp-QSL" customClass="FetchMenuView" customModule="RickAndMortyCompendium" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="600" width="50" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="gv7-t9-67f"/>
                                 </constraints>
@@ -59,7 +59,7 @@
                             <constraint firstItem="x2W-1x-gkE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="2vn-Jw-WQ9"/>
                             <constraint firstItem="T8O-YM-xVR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="3Hr-st-F8g"/>
                             <constraint firstAttribute="bottom" secondItem="T8O-YM-xVR" secondAttribute="bottom" id="3Zq-0k-lcb"/>
-                            <constraint firstItem="sp2-Tp-QSL" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="BFw-JR-hCu"/>
+                            <constraint firstItem="sp2-Tp-QSL" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="LNS-W7-aeK"/>
                             <constraint firstItem="x2W-1x-gkE" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="P13-n6-hrm"/>
                             <constraint firstItem="T8O-YM-xVR" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="PkJ-dl-Iet"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="x2W-1x-gkE" secondAttribute="bottom" id="Qq5-CJ-RyP"/>

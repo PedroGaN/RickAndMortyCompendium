@@ -23,6 +23,7 @@ class SplashPresenter: BasePresenter<SplashViewControllerProtocol, MainWireframe
     
     override func didAppear() {
         super.didAppear()
+        sleep(1)
         getRouter()?.toMainScreen()
     }
     

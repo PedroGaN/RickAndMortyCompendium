@@ -12,7 +12,7 @@ import Foundation
 public struct CharactersDomainModel {
 
     let info: CharactersInfoDomainModel
-    let results: CharactersResultsDomainModel
+    let results: [CharactersResultsDomainModel]
     
 }
 
