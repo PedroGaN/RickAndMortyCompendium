@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  RickAndMortyCompendium
+
+  Created by pedro.garcia.local on 23/1/23.
+  
+*/
+
+/* MainScreen Fetch Menu*/
+
+"fetch_menu_characters" = "Characters";
+"fetch_menu_locations" = "Locations";
+"fetch_menu_episodes" = "Episodes";
+
+/* MainScreen Table Menu*/
+
+"table_menu_search" = "Search";
+"table_menu_apply" = "Apply";
+"table_menu_search_name" = "Name";
+"table_menu_search_status" = "Status";
+"table_menu_search_species" = "Species";
+"table_menu_search_gender" = "Gender";
+
