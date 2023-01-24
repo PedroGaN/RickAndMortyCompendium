@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class FetchCharactersInteractor: BaseInteractor<Void, CharactersDomainModel> {
+public class FetchCharactersInteractor: BaseInteractor<String?, CharactersDomainModel> {
     
     // MARK: - Properties
     
@@ -22,10 +22,11 @@ public class FetchCharactersInteractor: BaseInteractor<Void, CharactersDomainMod
     
     // MARK: - Functions
     
-    public override func handle(onSuccess: @escaping (CharactersDomainModel) -> Void,
+    public override func handle(parameter: String?,
+                                onSuccess: @escaping (CharactersDomainModel) -> Void,
                                 onFailure: @escaping (Error) -> Void) {
         
-        alamofireHttpRepository.fetchCharacters(onSuccess: { characters in
+        alamofireHttpRepository.fetchCharacters(pageURL: parameter, onSuccess: { characters in
             onSuccess(characters)
         }, onFailure: { error in
             onFailure(error)

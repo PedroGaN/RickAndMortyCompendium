@@ -49,10 +49,11 @@ public class AlamofireHttpRepository: HttpRepository {
     
     // MARK: - AlamofireHttpRepository Methods
     
-    public func fetchCharacters(onSuccess: @escaping (CharactersDomainModel) -> Void,
+    public func fetchCharacters(pageURL: String?,
+                                onSuccess: @escaping (CharactersDomainModel) -> Void,
                                 onFailure: @escaping (Error) -> Void) {
         
-        let url = baseUrl + AlamofireHttpRepositoryConstants.Path.characters
+        let url: String = pageURL ?? (baseUrl + AlamofireHttpRepositoryConstants.Path.characters)
         
         alamofireSession.request(url,
                                  method: .get,
@@ -63,7 +64,7 @@ public class AlamofireHttpRepository: HttpRepository {
                 case .success:
                     do {
                         if let data = response.data {
-                            print("\nPOST: \(url) \n\n" + "RESPONSE:\n\n\(String(describing: data.prettyPrintedJSONString!))\n\n")
+                            print("\nGET: \(url) \n\n" + "RESPONSE:\n\n\(String(describing: data.prettyPrintedJSONString!))\n\n")
                             let charactersDomainModel = try CharactersDataModel(data: data).parseToDomainModel()
                             onSuccess(charactersDomainModel)
                         } else {

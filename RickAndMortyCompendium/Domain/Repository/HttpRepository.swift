@@ -9,7 +9,8 @@ import Foundation
 
 public protocol HttpRepository {
     
-    func fetchCharacters(onSuccess: @escaping (_ success: CharactersDomainModel) -> Void,
+    func fetchCharacters(pageURL: String?,
+                         onSuccess: @escaping (_ success: CharactersDomainModel) -> Void,
                          onFailure: @escaping (_ error: Error) -> Void)
     
 }
